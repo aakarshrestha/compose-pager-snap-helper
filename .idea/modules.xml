@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ComposePagerSnapHelper.iml" filepath="$PROJECT_DIR$/.idea/modules/ComposePagerSnapHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/ComposePagerSnapHelper.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/ComposePagerSnapHelper.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/composePagerSnapHelper/ComposePagerSnapHelper.composePagerSnapHelper.iml" filepath="$PROJECT_DIR$/.idea/modules/composePagerSnapHelper/ComposePagerSnapHelper.composePagerSnapHelper.iml" />
+    </modules>
+  </component>
+</project>
