@@ -1,3 +1,5 @@
+Release version [![](https://jitpack.io/v/aakarshrestha/compose-pager-snap-helper.svg)](https://jitpack.io/#aakarshrestha/compose-pager-snap-helper)
+
 # compose-pager-snap-helper
 
 It is a pager style snapping library in horizontal orientation. Provide the width used in the item in horizontally scrolling list, and it will calculate when to snap to the target view.
@@ -16,7 +18,7 @@ allprojects {
 Add it in your app build.gradle:
 ```
 dependencies {
-    implementation ""
+    implementation "com.github.aakarshrestha:compose-pager-snap-helper:[version]"
 }
 ```
 
