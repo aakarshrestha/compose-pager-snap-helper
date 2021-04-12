@@ -1,0 +1,1 @@
+# compose-pager-snap-helper
