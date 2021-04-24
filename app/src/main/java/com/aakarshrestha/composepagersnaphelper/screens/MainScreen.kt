@@ -12,7 +12,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.*
@@ -144,17 +143,18 @@ fun HeaderSection(
 @Composable
 fun HorizontalMusicList(count: Int) {
 
+    val widthValue = 320.dp
+
     ComposePagerSnapHelper(
-        width = 320.dp,
-        content = { connection, listState, width ->
+        width = widthValue
+    ) { listState ->
             LazyRow(
                 state = listState,
-                modifier = Modifier.nestedScroll(connection)
             ) {
                 items(count = count) { item ->
                     Card(
                         modifier = Modifier
-                            .width(width)
+                            .width(widthValue)
                             .height(350.dp)
                             .padding(
                                 start = if (item == 0) 16.dp else 16.dp,
@@ -168,8 +168,7 @@ fun HorizontalMusicList(count: Int) {
                 }
             }
         }
-    )
-}
+    }
 
 @Composable
 fun VerticalMusicList(musicList: List<Music>) {
