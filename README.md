@@ -32,21 +32,20 @@ dependencies {
 @Composable
 fun ComposePagerSnapHelper(
     width: Dp,
-    content: @Composable (NestedScrollConnection, LazyListState, Dp) -> Unit
+    content: @Composable (LazyListState) -> Unit
 )
 
 ```
 * @param width width of the item in horizontally scrolling list.
-* @param content a block which describes the content. Inside this block, you will have access to [NestedScrollConnection], [LazyListState] and [Dp].
+* @param content a block which describes the content. Inside this block, you will have access to [LazyListState].
 
 **Implementation:** Check out the sample app to see how it works.
 ```
 ComposePagerSnapHelper(
         width = 320.dp, //required
-        content = { connection, listState, width -> //these params are provided by the method itself, add these params below.
+        content = { listState -> //this param is provided by the method itself, add this param below.
             LazyRow(
                 state = listState, //add listState param
-                modifier = Modifier.nestedScroll(connection) //add connection param in nestedScroll method
             ) {
                 items(count = count) { item ->
                     Card(
