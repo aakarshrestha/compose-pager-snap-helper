@@ -44,6 +44,10 @@ class PagerSnapState {
             this.firstVisibleItemIndex.value = itemPos.index
         }
     }
+
+    internal suspend fun scrollItemToSnapPosition(listState: LazyListState, position: Int) {
+        listState.animateScrollToItem(position)
+    }
 }
 
 /**
@@ -131,7 +135,7 @@ fun ComposePagerSnapHelper(
             }
 
             scope.launch {
-                listState.animateScrollToItem(position)
+                state.scrollItemToSnapPosition(listState, position)
             }
 
         }
