@@ -5,6 +5,19 @@ Release version [![](https://jitpack.io/v/aakarshrestha/compose-pager-snap-helpe
 It is a pager style snapping library in horizontal orientation. Provide the width used in the item in horizontally scrolling list, and it will calculate when to snap to the target view.
 
 # Download
+If the gradle cannot build the project because of this library, update your settings.gradle file with
+```
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
 Add it in your root build.gradle at the end of repositories:
 ```
 allprojects {
